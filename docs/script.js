@@ -13,3 +13,13 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const diaLibLink = document.querySelector("nav li:nth-child(2)");
+  const diaLibDropdown = diaLibLink.querySelector("ul");
+
+  // Add click event listener to DiaLib link
+  diaLibLink.addEventListener("click", function () {
+    diaLibDropdown.classList.toggle("active");
+  });
+});
