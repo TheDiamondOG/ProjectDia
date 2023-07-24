@@ -11,10 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (linkPath === currentPath) {
       link.classList.add("active");
     }
-  });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
+  // Dropdown
   const diaLibLink = document.querySelector("nav li:nth-child(2) a");
   const diaLibDropdown = document.getElementById("diaLibDropdown");
 
