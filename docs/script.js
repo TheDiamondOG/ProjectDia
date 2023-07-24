@@ -15,11 +15,11 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  const diaLibLink = document.querySelector("nav li:nth-child(2)");
-  const diaLibDropdown = diaLibLink.querySelector("ul");
+  const diaLibLink = document.querySelector("nav li:nth-child(2) a");
+  const diaLibDropdown = document.getElementById("diaLibDropdown");
 
-  // Add click event listener to DiaLib link
-  diaLibLink.addEventListener("click", function () {
+  diaLibLink.addEventListener("click", function (event) {
+    event.preventDefault(); // Prevent default link behavior
     diaLibDropdown.classList.toggle("active");
   });
 });
