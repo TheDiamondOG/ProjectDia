@@ -164,3 +164,11 @@ li {
     color: #FFFFFF;
     margin-bottom: 10px;
 }
+
+#diaLibDropdown.active {
+  display: block;
+}
+
+#diaLibDropdown {
+  display: none;
+}
