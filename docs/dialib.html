@@ -9,8 +9,41 @@
 <!-- DiaLib Section -->
 <h2>DiaLib</h2>
 <p>DiaLib is a powerful GUI library for Unity that simplifies the process of creating and managing GUI elements. It provides a set of classes and methods that enable you to build interactive and user-friendly interfaces for your Unity projects.</p>
+<h3>How to Use DiaLib:</h3>
+<p>To use DiaLib in your Unity project, follow these steps:</p>
+<ol>
+    <li>Download the DiaLib package from the official GitHub repository.</li>
+    <li>Import the DiaLib package into your Unity project.</li>
+    <li>Create an instance of the GUIManager class to manage your GUI elements.</li>
+    <li>Add GUI elements such as buttons, toggles, and text fields using the GUIManager's AddButton, AddToggle, and AddTextField methods.</li>
+    <li>Customize the appearance and behavior of the GUI elements as needed.</li>
+    <li>Run your Unity project to see the GUI in action.</li>
+</ol>
 
-<!-- Add more content about DiaLib -->
+<!-- Example Code for DiaLib -->
+<h3>Example Code:</h3>
+<pre><code>
+    using UnityEngine;
+    using DiaLib;
+
+    public class MyGUIController : MonoBehaviour
+    {
+        private GUIManager guiManager;
+
+        private void Start()
+        {
+            guiManager = new GUIManager(Color.white, new Color(0.2f, 0.2f, 0.2f, 0.8f), "My GUI Window");
+            guiManager.AddButton("Click Me", (label) => Debug.Log("Button Clicked: " + label));
+            guiManager.AddToggle("Enable Feature", true, (value) => Debug.Log("Toggle Value Changed: " + value));
+            guiManager.AddTextField("Enter Name:", "", (text) => Debug.Log("Text Changed: " + text));
+        }
+
+        private void OnGUI()
+        {
+            guiManager.DrawGUI();
+        }
+    }
+</code></pre>
 
 </body>
 </html>

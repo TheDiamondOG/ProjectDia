@@ -10,7 +10,43 @@
 <h2>Parts of DiaLib</h2>
 <p>In addition to the `GUIManager` and `EasyGUI` classes, DiaLib includes other useful parts to enhance your GUI functionality.</p>
 
-<!-- Add more content about the different parts of DiaLib -->
+<h3>GUIButton</h3>
+<p>The `GUIButton` class represents a button element in the GUI. It allows you to create clickable buttons with custom labels and execute actions when the button is clicked.</p>
+<h4>Properties:</h4>
+<ul>
+    <li><b>Label:</b> Gets or sets the label text displayed on the button.</li>
+    <li><b>OnClick:</b> Gets or sets the action to be executed when the button is clicked.</li>
+</ul>
+<p>Example:</p>
+<pre><code>
+    GUIButton myButton = new GUIButton("Click Me!", () => Debug.Log("Button Clicked!"));
+</code></pre>
+
+<h3>GUIToggle</h3>
+<p>The `GUIToggle` class represents a toggle element in the GUI. It allows you to create toggleable switches with custom labels and execute actions when the toggle value is changed.</p>
+<h4>Properties:</h4>
+<ul>
+    <li><b>Label:</b> Gets or sets the label text displayed next to the toggle.</li>
+    <li><b>Value:</b> Gets or sets the current value of the toggle.</li>
+    <li><b>OnValueChanged:</b> Gets or sets the action to be executed when the toggle value is changed.</li>
+</ul>
+<p>Example:</p>
+<pre><code>
+    GUIToggle myToggle = new GUIToggle("Enable Feature", true, (value) => Debug.Log("Toggle Value Changed: " + value));
+</code></pre>
+
+<h3>GUITextField</h3>
+<p>The `GUITextField` class represents a text field element in the GUI. It allows you to create input fields for users to enter text and execute actions when the text is changed.</p>
+<h4>Properties:</h4>
+<ul>
+    <li><b>Label:</b> Gets or sets the label text displayed above the text field.</li>
+    <li><b>Text:</b> Gets or sets the current text value in the text field.</li>
+    <li><b>OnTextChanged:</b> Gets or sets the action to be executed when the text in the field is changed.</li>
+</ul>
+<p>Example:</p>
+<pre><code>
+    GUITextField myTextField = new GUITextField("Enter Name:", "", (text) => Debug.Log("Text Changed: " + text));
+</code></pre>
 
 </body>
 </html>
