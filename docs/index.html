@@ -12,109 +12,16 @@
 <h1>ProjectDia Documentation</h1>
 <h2>Table of Contents</h2>
 <ul>
-    <li><a href="#dialib">DiaLib</a></li>
-    <li><a href="#gui-manager">GUIManager</a></li>
-    <li><a href="#easy-gui">EasyGUI</a></li>
-    <li><a href="#parts">Parts of DiaLib</a></li>
-    <li><a href="#conclusion">Conclusion</a></li>
+    <li><a href="dialib.html">DiaLib</a></li>
+    <li><a href="guimanager.html">GUIManager</a></li>
+    <li><a href="easygui.html">EasyGUI</a></li>
+    <li><a href="parts.html">Parts of DiaLib</a></li>
+    <li><a href="conclusion.html">Conclusion</a></li>
 </ul>
 
-<!-- DiaLib Section -->
-<h2 id="dialib">DiaLib</h2>
-<p>DiaLib is a powerful GUI library for Unity that simplifies the process of creating and managing GUI elements. It provides a set of classes and methods that enable you to build interactive and user-friendly interfaces for your Unity projects.</p>
+<!-- Overview -->
+<h2>Overview</h2>
+<p>This is the main page of the ProjectDia documentation. It provides an overview of the different sections of the documentation and serves as a starting point for exploring the library.</p>
 
-<!-- GUIManager Section -->
-<h2 id="gui-manager">GUIManager</h2>
-<p>The `GUIManager` class is the core component of DiaLib. It acts as a manager for GUI elements and is responsible for drawing the GUI window and handling user interactions.</p>
-<h3>Properties:</h3>
-<ul>
-    <li><b>GUIColor:</b> Gets or sets the color of the GUI elements.</li>
-    <li><b>BackgroundColor:</b> Gets or sets the background color of the GUI window.</li>
-    <li><b>Title:</b> Gets or sets the title of the GUI window.</li>
-</ul>
-<h3>Methods:</h3>
-<ul>
-    <li><b>AddButton:</b> Adds a button to the GUI window.</li>
-    <li><b>AddToggle:</b> Adds a toggle switch to the GUI window.</li>
-    <li><b>AddTextField:</b> Adds a text field to the GUI window.</li>
-</ul>
-<p>Example:</p>
-<pre><code>
-    GUIManager guiManager = new GUIManager();
-    guiManager.GUIColor = Color.white;
-    guiManager.BackgroundColor = new Color(0.2f, 0.2f, 0.2f, 0.8f);
-    guiManager.Title = "My GUI Window";
-    guiManager.AddButton("Click Me", (label) => Debug.Log("Button Clicked: " + label));
-</code></pre>
-
-<!-- EasyGUI Section -->
-<h2 id="easy-gui">EasyGUI</h2>
-<p>The `EasyGUI` class is a static utility class that provides a simplified interface for working with the `GUIManager`. It encapsulates common GUI elements and layout functionalities, making it easier to create GUIs with less code.</p>
-<h3>Properties:</h3>
-<ul>
-    <li><b>GUIColor:</b> Gets or sets the color of the GUI elements.</li>
-    <li><b>BackgroundColor:</b> Gets or sets the background color of the GUI window.</li>
-    <li><b>Title:</b> Gets or sets the title of the GUI window.</li>
-</ul>
-<h3>Methods:</h3>
-<ul>
-    <li><b>BeginWindow:</b> Begins a GUI window with a custom content section.</li>
-    <li><b>Button:</b> Adds a button to the GUI window with custom onClick action.</li>
-    <li><b>Toggle:</b> Adds a toggle switch to the GUI window with custom onValueChanged action.</li>
-    <li><b>TextField:</b> Adds a text field to the GUI window with custom onTextChanged action.</li>
-</ul>
-<p>Example:</p>
-<pre><code>
-    EasyGUI.GUIColor = Color.white;
-    EasyGUI.BackgroundColor = new Color(0.2f, 0.2f, 0.2f, 0.8f);
-    EasyGUI.Title = "My GUI Window";
-    EasyGUI.Button("Click Me", () => Debug.Log("Button Clicked!"));
-</code></pre>
-
-<!-- Parts of DiaLib Section -->
-<h2 id="parts">Parts of DiaLib</h2>
-<p>In addition to the `GUIManager` and `EasyGUI` classes, DiaLib includes other useful parts to enhance your GUI functionality.</p>
-
-<h3>GUIButton</h3>
-<p>The `GUIButton` class represents a button element in the GUI. It allows you to create clickable buttons with custom labels and execute actions when the button is clicked.</p>
-<h4>Properties:</h4>
-<ul>
-    <li><b>Label:</b> Gets or sets the label text displayed on the button.</li>
-    <li><b>OnClick:</b> Gets or sets the action to be executed when the button is clicked.</li>
-</ul>
-<p>Example:</p>
-<pre><code>
-    GUIButton myButton = new GUIButton("Click Me!", () => Debug.Log("Button Clicked!"));
-</code></pre>
-
-<h3>GUIToggle</h3>
-<p>The `GUIToggle` class represents a toggle element in the GUI. It allows you to create toggleable switches with custom labels and execute actions when the toggle value is changed.</p>
-<h4>Properties:</h4>
-<ul>
-    <li><b>Label:</b> Gets or sets the label text displayed next to the toggle.</li>
-    <li><b>Value:</b> Gets or sets the current value of the toggle.</li>
-    <li><b>OnValueChanged:</b> Gets or sets the action to be executed when the toggle value is changed.</li>
-</ul>
-<p>Example:</p>
-<pre><code>
-    GUIToggle myToggle = new GUIToggle("Enable Feature", true, (value) => Debug.Log("Toggle Value Changed: " + value));
-</code></pre>
-
-<h3>GUITextField</h3>
-<p>The `GUITextField` class represents a text field element in the GUI. It allows you to create input fields for users to enter text and execute actions when the text is changed.</p>
-<h4>Properties:</h4>
-<ul>
-    <li><b>Label:</b> Gets or sets the label text displayed above the text field.</li>
-    <li><b>Text:</b> Gets or sets the current text value in the text field.</li>
-    <li><b>OnTextChanged:</b> Gets or sets the action to be executed when the text in the field is changed.</li>
-</ul>
-<p>Example:</p>
-<pre><code>
-    GUITextField myTextField = new GUITextField("Enter Name:", "", (text) => Debug.Log("Text Changed: " + text));
-</code></pre>
-
-<!-- Conclusion Section -->
-<h2 id="conclusion">Conclusion</h2>
-<p>With the `GUIManager`, `EasyGUI`, and other parts of DiaLib, you have all the necessary tools to create a rich and interactive GUI for your Unity project. The library simplifies the process of creating GUI elements and managing their interactions, allowing you to focus on building a user-friendly interface.</p>
 </body>
 </html>
