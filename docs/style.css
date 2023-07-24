@@ -41,6 +41,11 @@ nav a:hover {
     border-left: 5px solid #7289da;
 }
 
+nav a.active {
+  background-color: #37393f;
+  border-left: 5px solid #7289da;
+}
+
 .content {
     margin-left: 220px;
     padding: 20px;
