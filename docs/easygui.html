@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Project Dia Documentation - EasyGUI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="dialib.html">DiaLib</a></li>
+            <li><a href="guimanager.html">GUIManager</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="content">
+        <h2>EasyGUI</h2>
+        <p>The `EasyGUI` class is a static utility class that provides a simplified interface for working with the `GUIManager`. It encapsulates common GUI elements and layout functionalities, making it easier to create GUIs with less code.</p>
+        <h3>Properties:</h3>
+        <ul>
+            <li><b>GUIColor:</b> Gets or sets the color of the GUI elements.</li>
+            <li><b>BackgroundColor:</b> Gets or sets the background color of the GUI window.</li>
+            <li><b>Title:</b> Gets or sets the title of the GUI window.</li>
+        </ul>
+        <h3>Methods:</h3>
+        <ul>
+            <li><b>BeginWindow:</b> Begins a GUI window with a custom content section.</li>
+            <li><b>Button:</b> Adds a button to the GUI window with custom onClick action.</li>
+            <li><b>Toggle:</b> Adds a toggle switch to the GUI window with custom onValueChanged action.</li>
+            <li><b>TextField:</b> Adds a text field to the GUI window with custom onTextChanged action.</li>
+        </ul>
+        <p>Example:</p>
+        <pre><code>
+            EasyGUI.GUIColor = Color.white;
+            EasyGUI.BackgroundColor = new Color(0.2f, 0.2f, 0.2f, 0.8f);
+            EasyGUI.Title = "My GUI Window";
+            EasyGUI.Button("Click Me", () => Debug.Log("Button Clicked!"));
+        </code></pre>
+    </div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Project Dia Documentation - GUIManager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="dialib.html">DiaLib</a></li>
+            <li><a href="easygui.html">EasyGUI</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="content">
+        <h2>GUIManager</h2>
+        <p>The `GUIManager` class is the core component of DiaLib. It acts as a manager for GUI elements and is responsible for drawing the GUI window and handling user interactions.</p>
+        <h3>Properties:</h3>
+        <ul>
+            <li><b>GUIColor:</b> Gets or sets the color of the GUI elements.</li>
+            <li><b>BackgroundColor:</b> Gets or sets the background color of the GUI window.</li>
+            <li><b>Title:</b> Gets or sets the title of the GUI window.</li>
+        </ul>
+        <h3>Methods:</h3>
+        <ul>
+            <li><b>AddButton:</b> Adds a button to the GUI window.</li>
+            <li><b>AddToggle:</b> Adds a toggle switch to the GUI window.</li>
+            <li><b>AddTextField:</b> Adds a text field to the GUI window.</li>
+        </ul>
+        <p>Example:</p>
+        <pre><code>
+            GUIManager guiManager = new GUIManager();
+            guiManager.GUIColor = Color.white;
+            guiManager.BackgroundColor = new Color(0.2f, 0.2f, 0.2f, 0.8f);
+            guiManager.Title = "My GUI Window";
+            guiManager.AddButton("Click Me", (label) => Debug.Log("Button Clicked: " + label));
+        </code></pre>
+    </div>
+</body>
+</html>

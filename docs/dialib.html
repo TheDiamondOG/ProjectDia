@@ -5,104 +5,51 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- ProjectDia - DiaLib Documentation -->
+    <!-- Sidebar -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Introduction</a></li>
+            <li><a href="#dialib">DiaLib</a></li>
+            <li><a href="guimanager.html">GUIManager</a></li>
+            <li><a href="easygui.html">EasyGUI</a></li>
+        </ul>
+    </nav>
 
-    <!-- Table of Contents -->
-    <h1>ProjectDia Documentation</h1>
-    <h2>Table of Contents</h2>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="#dialib">DiaLib</a></li>
-        <li><a href="#gui-manager">GUIManager</a></li>
-        <li><a href="#easy-gui">EasyGUI</a></li>
-        <li><a href="#parts">Parts of DiaLib</a></li>
-        <li><a href="#conclusion">Conclusion</a></li>
-    </ul>
+    <!-- Main Content -->
+    <div class="content">
+        <h1>DiaLib</h1>
+        <p>DiaLib is a powerful GUI library for Unity that simplifies the process of creating and managing GUI elements. It provides a set of classes and methods that enable you to build interactive and user-friendly interfaces for your Unity projects.</p>
 
-    <!-- DiaLib Section -->
-    <h2 id="dialib">DiaLib</h2>
-    <p>DiaLib is a simple GUI library for Unity that makes it easier to create and manage GUI elements for your projects. It provides essential classes to build interactive and user-friendly interfaces without the need for complex code.</p>
-    <p>Key features of DiaLib:</p>
-    <ul>
-        <li>Easy-to-use API for creating GUI elements.</li>
-        <li>Allows customizing GUI element appearance, colors, and positions.</li>
-        <li>Simplifies handling user interactions and events.</li>
-        <li>Supports buttons, toggle switches, and text fields.</li>
-        <li>Provides a clear and straightforward interface for GUI management.</li>
-    </ul>
+        <details>
+            <summary>GUI Elements</summary>
+            <p>DiaLib includes various GUI elements that you can use to create intuitive user interfaces:</p>
+            <ul>
+                <li>Buttons: Create clickable buttons with custom labels and execute actions when clicked.</li>
+                <li>Toggle Switches: Add toggleable switches with custom labels and execute actions when the toggle value is changed.</li>
+                <li>Text Fields: Create input fields for users to enter text and execute actions when the text is changed.</li>
+                <!-- Add more GUI elements here -->
+            </ul>
+        </details>
 
-    <!-- GUIManager Section -->
-    <h2 id="gui-manager">GUIManager</h2>
-    <p>The `GUIManager` is the core component of DiaLib. It manages the GUI elements and handles drawing the GUI window along with user interactions.</p>
-    <h3>Properties:</h3>
-    <ul>
-        <li><b>GUIColor:</b> Gets or sets the color of the GUI elements.</li>
-        <li><b>BackgroundColor:</b> Gets or sets the background color of the GUI window.</li>
-        <li><b>Title:</b> Gets or sets the title of the GUI window.</li>
-    </ul>
-    <h3>Methods:</h3>
-    <ul>
-        <li><b>AddButton:</b> Adds a button to the GUI window.</li>
-        <li><b>AddToggle:</b> Adds a toggle switch to the GUI window.</li>
-        <li><b>AddTextField:</b> Adds a text field to the GUI window.</li>
-    </ul>
-    <p>Example:</p>
-    <pre><code>
-// Create a new GUIManager
-GUIManager guiManager = new GUIManager();
+        <h2>Customization</h2>
+        <p>With DiaLib, you can easily customize the appearance of your GUI elements by setting various properties such as color, size, and position. The library also allows you to define custom actions that will be executed when users interact with the GUI elements.</p>
 
-// Set the GUI color and background color
-guiManager.GUIColor = Color.white;
-guiManager.BackgroundColor = new Color(0.2f, 0.2f, 0.2f, 0.8f);
+        <h2>Integration with Unity</h2>
+        <p>DiaLib is designed to seamlessly integrate with Unity projects. It is built using Unity's native GUI system and follows Unity's guidelines and best practices for GUI development. You can use DiaLib in any Unity project without any additional setup or configuration.</p>
 
-// Set the GUI window title
-guiManager.Title = "My GUI Window";
+        <h2>Easy to Use</h2>
+        <p>DiaLib provides a straightforward and intuitive API, making it accessible to both beginner and experienced Unity developers. Whether you're creating a simple prototype or a complex user interface, DiaLib can help you save time and effort by simplifying the GUI creation process.</p>
 
-// Add a button to the GUI window
-guiManager.AddButton("Click Me", (label) => Debug.Log("Button Clicked: " + label));
-    </code></pre>
+        <h2>Documentation</h2>
+        <p>For detailed information on how to use DiaLib and its various components, refer to the other sections of this documentation:</p>
+        <ul>
+            <li><a href="guimanager.html">GUIManager</a></li>
+            <li><a href="easygui.html">EasyGUI</a></li>
+            <!-- Add links to other DiaLib components here -->
+        </ul>
 
-    <!-- EasyGUI Section -->
-    <h2 id="easy-gui">EasyGUI</h2>
-    <p>The `EasyGUI` is a static utility class that simplifies working with `GUIManager`. It provides a user-friendly interface to create GUI elements with less code.</p>
-    <h3>Properties:</h3>
-    <ul>
-        <li><b>GUIColor:</b> Gets or sets the color of the GUI elements.</li>
-        <li><b>BackgroundColor:</b> Gets or sets the background color of the GUI window.</li>
-        <li><b>Title:</b> Gets or sets the title of the GUI window.</li>
-    </ul>
-    <h3>Methods:</h3>
-    <ul>
-        <li><b>BeginWindow:</b> Begins a GUI window with custom content.</li>
-        <li><b>Button:</b> Adds a button to the GUI window with a custom onClick action.</li>
-        <li><b>Toggle:</b> Adds a toggle switch to the GUI window with a custom onValueChanged action.</li>
-        <li><b>TextField:</b> Adds a text field to the GUI window with a custom onTextChanged action.</li>
-    </ul>
-    <p>Example:</p>
-    <pre><code>
-// Set the GUI color and background color using EasyGUI
-EasyGUI.GUIColor = Color.white;
-EasyGUI.BackgroundColor = new Color(0.2f, 0.2f, 0.2f, 0.8f);
-
-// Set the GUI window title using EasyGUI
-EasyGUI.Title = "My GUI Window";
-
-// Add a button to the GUI window using EasyGUI
-EasyGUI.Button("Click Me", () => Debug.Log("Button Clicked!"));
-    </code></pre>
-
-    <!-- Parts of DiaLib Section -->
-    <h2 id="parts">Parts of DiaLib</h2>
-    <p>In addition to the `GUIManager` and `EasyGUI`, DiaLib includes other essential components:</p>
-    <h3>GUIButton</h3>
-    <p>The `GUIButton` represents a button element in the GUI. It allows you to create clickable buttons with custom labels and execute actions when the button is clicked.</p>
-    <h3>GUIToggle</h3>
-    <p>The `GUIToggle` represents a toggle element in the GUI. It allows you to create toggleable switches with custom labels and execute actions when the toggle value is changed.</p>
-    <h3>GUITextField</h3>
-    <p>The `GUITextField` represents a text field element in the GUI. It allows you to create input fields for users to enter text and execute actions when the text is changed.</p>
-
-    <!-- Conclusion Section -->
-    <h2 id="conclusion">Conclusion</h2>
-    <p>With DiaLib, you have all the necessary tools to create a rich and interactive GUI for your Unity project. The library simplifies the process of creating GUI elements and managing their interactions, allowing you to focus on building a user-friendly interface.</p>
+        <h2>Conclusion</h2>
+        <p>DiaLib is a versatile and user-friendly GUI library that can significantly enhance your Unity projects' user interfaces. By simplifying the process of creating GUI elements and managing their interactions, DiaLib allows you to focus on building engaging and interactive user experiences.</p>
+    </div>
 </body>
 </html>
