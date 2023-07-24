@@ -11,12 +11,5 @@ document.addEventListener("DOMContentLoaded", function () {
     if (linkPath === currentPath) {
       link.classList.add("active");
     }
-  // Dropdown
-  const diaLibLink = document.querySelector("nav li:nth-child(2) a");
-  const diaLibDropdown = document.getElementById("diaLibDropdown");
-
-  diaLibLink.addEventListener("click", function (event) {
-    event.preventDefault(); // Prevent default link behavior
-    diaLibDropdown.classList.toggle("active");
   });
 });
